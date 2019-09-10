@@ -24,3 +24,18 @@ padding:5px;`
 ```
 background-color: ${props => (props.danger ? "#e74c3c" : "#2ecc71")}
 ```
+
+3. createGlobalStyle and styled
+
+- body 부분의 css를 변경하기 위해 css파일을 만들어야 할까? ㄴㄴ
+- createGlobalStyle 을 불러온다(injectGlobal 없어졌음)
+  https://www.styled-components.com/docs/faqs#what-do-i-need-to-do-to-migrate-to-v4
+- 만약 이미 있는 태그의 스타일을 가져오고 싶다면 태그 객체.withComponent()를 사용하자
+
+```
+const Anchor = Button.withComponent("a");
+-> Anchor는 a태그지만 Button의 style을 가짐
+```
+
+- Anchor에 밑줄을 없애고 싶을 때? styled()`` 를 사용한다(?)
+  https://github.com/styled-components/styled-components/issues/1546
