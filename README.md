@@ -58,3 +58,17 @@ keyframes`` 안에 css keyframes설정을 해두고 animation을 사용할 곳�
 
 animation: ${rotation} ${rotationTime}s
 ```
+
+5. Extra Attributes and Mixins
+
+- 태그의 속성을 주고 싶을 때 styled.input.attrs({})로 .attrs를 사용하자
+
+```
+const Input = styled.input.attrs({
+    required: true
+})``
+
+<Input placeholder="hello">
+```
+
+- mixin : css 속성:값들을 모아둔 그룹. 자주 쓰는 설정값들을 모아두고 다른사람들과 공유할 때 편함.
