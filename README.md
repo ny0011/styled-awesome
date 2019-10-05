@@ -39,3 +39,22 @@ const Anchor = Button.withComponent("a");
 
 - Anchor에 밑줄을 없애고 싶을 때? styled()`` 를 사용한다(?)
   https://github.com/styled-components/styled-components/issues/1546
+
+4. Animations
+
+- 애니메이션을 사용할 때 keyframes, css component를 import한다
+
+```
+import {css, keyframes} from "styled-components"
+
+keyframes`` 안에 css keyframes설정을 해두고 animation을 사용할 곳에 css`animation: ${변수이름} 2s linear infinite` 로 해준다
+
+```
+
+- 변수를 설정해서 css를 바꾸는 것 뿐만 아니라 props의 변수들로 css를 바꾸는 것도 가능함
+
+```
+<Button danger rotationTime="{1}>
+
+animation: ${rotation} ${rotationTime}s
+```
